@@ -6,9 +6,10 @@ import NavBar from './components/NavBar'
 import ProductList from './components/ProductList'
 import Details from './components/Details'
 import Cart from './components/Cart'
-import Default from './components/Cart'
+import Default from './components/Default'
 import { BrowserRouter as Router } from 'react-router-dom'
 import GlobalStates from './contexts/GlobalStates';
+import Modal from './components/Modal'
 
 const App = props => {
   return (
@@ -21,6 +22,7 @@ const App = props => {
           <Route path="/cart" component={Cart} />
           <Route component={Default} />
         </Switch>
+        <Modal/>
       </Router>
       </GlobalStates>
   );

@@ -16,7 +16,10 @@ const Product=props=> {
                             <img src={img} alt="product" className="card-img-top"></img>
                         </Link>
                         <button className="card-btn" disabled={inCart ? true : false}
-                            onClick={() => console.log("added to cart")}>
+                            onClick={
+                                () =>{ DemoContext.addToCart(id);
+                                    DemoContext.openModal(id);}
+                                }>
                             {inCart ?
                                 <p className="text-capitalize mb-0" disabled>in cart</p> :
                                 <i className="fa fa-cart-plus"></i>}
